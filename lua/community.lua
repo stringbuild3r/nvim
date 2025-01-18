@@ -3,6 +3,7 @@
 -- This guarantees that the specs are processed before any user plugins.
 
 ---@type LazySpec
+---
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
