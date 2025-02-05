@@ -4,30 +4,30 @@ return {
   lazy = false,
   priority = 1000,
   opts = {
-    style = "storm",  -- "night", "storm", or "moon"
+    style = "storm",  
     transparent = false,
     styles = {
-      comments = { italic = false },     -- No italics for comments
-      keywords = { italic = false },     -- No italics for keywords
-      functions = { bold = false },      -- No bold for function names
-      variables = { bold = false },      -- No bold for variables
-      sidebars = "dark",                 -- Dark sidebars
-      floats = "dark",                   -- Dark floating windows
+      comments = { italic = false },     
+      keywords = { italic = false },     
+      functions = { bold = false },     
+      variables = { bold = false },    
+      sidebars = "dark",              
+      floats = "dark",               
     },
     on_colors = function(colors)
-      colors.bg = "#000000"             -- Main background
-      colors.bg_dark = "#000000"        -- Darker background
-      colors.bg_float = "#000000"       -- Floating windows
-      colors.bg_sidebar = "#000000"     -- Sidebar background
-      colors.bg_statusline = "#000000"  -- Statusline background
-      colors.bg_popup = "#000000"       -- Popup background
+      colors.bg = "#000000"             
+      colors.bg_dark = "#000000"       
+      colors.bg_float = "#000000"     
+      colors.bg_sidebar = "#000000"  
+      colors.bg_statusline = "#000000"
+      colors.bg_popup = "#000000"    
     end,
   },
   config = function(_, opts)
     require("tokyonight").setup(opts)
     vim.cmd("colorscheme tokyonight")
 
-    -- Force background for specific UI elements
+
     vim.api.nvim_set_hl(0, "Normal", { bg = "#000000", italic = false, bold = false })
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#000000", italic = false, bold = false })
     vim.api.nvim_set_hl(0, "StatusLine", { bg = "#000000", italic = false, bold = false })
