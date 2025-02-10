@@ -3,13 +3,18 @@ return {
   config = function()
     require("vague").setup({
       style = {
-        comments = "none",  -- Override default italic
-        strings = "none",   -- Override default italic
+        comments = "none",
+        strings = "none",
       },
       colors = {
-        pmenu = "#1d1e1f",      -- Popup menu background
-        pmenusel = "#2a2b2c",   -- Selected item highlight
+        bg = "#100d01",
+        pmenu = "#1d1e1f",
+        pmenusel = "#2a2b2c",
       }
     })
+
+    -- Force background color override
+    vim.cmd("highlight Normal guibg=#000000")
+    vim.cmd("highlight NormalNC guibg=#000000")
   end
 }
