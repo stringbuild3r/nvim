@@ -12,9 +12,5 @@ return {
         pmenusel = "#2a2b2c",
       }
     })
-
-    -- Force background color override
-    vim.cmd("highlight Normal guibg=#000000")
-    vim.cmd("highlight NormalNC guibg=#000000")
-  end
+  end -- <- Missing 'end' added here
 }
