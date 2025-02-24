@@ -1,5 +1,5 @@
 return {
-  "vague2k/vague.nvim",
+   "vague2k/vague.nvim",
   config = function()
     require("vague").setup({
       style = {
@@ -12,5 +12,5 @@ return {
         pmenusel = "#2a2b2c",
       }
     })
-  end -- <- Missing 'end' added here
+  end
 }
