@@ -15,7 +15,15 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
-
-
 require "lazy_setup"
 require "polish"
+
+
+vim.opt.list = true
+
+-- Configure 'listchars' to display dots for leading spaces (indentation)
+vim.opt.listchars:append({
+  lead = '·',  -- Character for leading spaces
+  trail = '·', -- Character for trailing spaces
+  tab = '»·',  -- Characters for tabs
+})
