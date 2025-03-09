@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- Customize Mason plugins
 
@@ -10,7 +10,8 @@ return {
     -- overrides `require("mason-lspconfig").setup(...)`
     opts = {
       ensure_installed = {
-        "lua_ls",
+        "lua_ls",         -- Lua language server
+        "rust_analyzer",  -- Rust language server
         -- add more arguments for adding more language servers
       },
     },
@@ -21,7 +22,8 @@ return {
     -- overrides `require("mason-null-ls").setup(...)`
     opts = {
       ensure_installed = {
-        "stylua",
+        "stylua",         -- Lua formatter
+        "rustfmt",        -- Rust formatter
         -- add more arguments for adding more null-ls sources
       },
     },
@@ -31,7 +33,8 @@ return {
     -- overrides `require("mason-nvim-dap").setup(...)`
     opts = {
       ensure_installed = {
-        "python",
+        "python",         -- Python debugger
+        "codelldb",       -- Debugger for Rust and C++
         -- add more arguments for adding more debuggers
       },
     },
