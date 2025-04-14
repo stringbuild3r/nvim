@@ -21,6 +21,16 @@ require "polish"
 
 
 
+function GetCurrentIconFile()
+  local filename = vim.fn.expand "%:t"
+  local icon = require("nvim-web-devicons").get_icon(filename)
+  return icon or "" -- Default icon if not found
+end
+
+vim.o.titlestring = '%{fnamemodify(getcwd(), ":t")} %{v:lua.GetCurrentIconFile()} %{expand("%:t")}'
+
+
+
 vim.opt.list = true
 vim.opt.listchars = { tab = "· ", trail = "·", extends = ">", precedes = "<", space = "·" }
 
