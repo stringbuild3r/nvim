@@ -4,7 +4,7 @@ return {
     priority = 1000,
     opts = {
         highlights = {
-            Comment = { bold = true }
+            Comment = { bold = false}
         }
         -- You can add other Cyberdream options here
     }
