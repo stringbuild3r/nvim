@@ -4,8 +4,11 @@ return {
     priority = 1000,
     opts = {
         highlights = {
-            Comment = { bold = false}
+            Comment = { bold = false }
         }
-        -- You can add other Cyberdream options here
-    }
+    },
+    config = function(_, opts)
+        require("cyberdream").setup(opts)
+        vim.cmd("colorscheme cyberdream") -- Apply it here
+    end
 }

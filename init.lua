@@ -31,7 +31,6 @@ end
 vim.o.titlestring = '%{fnamemodify(getcwd(), ":t")} %{v:lua.GetCurrentIconFile()} %{expand("%:t")}'
 
 
-
 vim.opt.list = true
 vim.opt.listchars = { tab = "· ", trail = "·", extends = ">", precedes = "<", space = "·" }
 
