@@ -10,9 +10,9 @@ return {
   opts = {
     -- Configuration table of features provided by AstroLSP
     features = {
-      codelens = true, -- enable/disable codelens refresh on start
-      inlay_hints = false, -- enable/disable inlay hints on start
-      semantic_tokens = true, -- enable/disable semantic token highlighting
+      codelens = false, -- disable codelens refresh
+      inlay_hints = false, -- disable inlay hints
+      semantic_tokens = false, -- disable semantic token highlighting
     },
     -- customize lsp formatting options
     formatting = {
@@ -37,12 +37,49 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      -- "pyright"
+      "pyright"
     },
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      pyright = {
+        settings = {
+          python = {
+            analysis = {
+              useLibraryCodeForTypes = true,
+              diagnosticMode = "workspace", -- or "openFilesOnly"
+              typeCheckingMode = "basic", -- or "off", "strict"
+            },
+          },
+        },
+        root_dir = function() return vim.fn.getcwd() end,
+      },
+      rust_analyzer = {
+        settings = {
+          ["rust-analyzer"] = {
+            cargo = {
+              features = "all",
+            },
+            checkOnSave = {
+              enable = true,
+            },
+            check = {
+              command = "clippy",
+            },
+            imports = {
+              group = {
+                enable = false,
+              },
+            },
+            completion = {
+              postfix = {
+                enable = false,
+              },
+            },
+          },
+        },
+      },
     },
     -- customize how language servers are attached
     handlers = {
