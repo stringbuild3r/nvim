@@ -21,6 +21,7 @@ return {
       gruvbox = {
         -- Ensure consistent dark background
         Normal = { bg = "#282828" },
+        CursorLineNr = { fg = "#fabd2f", bold = true },
         NormalNC = { bg = "#282828" },
         NormalFloat = { bg = "#282828" },
         SignColumn = { bg = "#282828" },
@@ -35,6 +36,8 @@ return {
         NeoTreeNormal = { bg = "#282828" },
         NeoTreeNormalNC = { bg = "#282828" },
         NeoTreeEndOfBuffer = { bg = "#282828" },
+        WinBar = { bg = "#282828" },
+        WinBarNC = { bg = "#282828" },
       },
     },
     -- Icons can be configured throughout the interface

@@ -32,7 +32,8 @@ return {
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = false, -- sets vim.opt.wrap
         guicursor = "", -- disable cursor styling/blinking
-        cursorline = false, -- disable cursor line highlighting
+        cursorline = true, -- enable for CursorLineNr highlighting
+        cursorlineopt = "number", -- only highlight the line number, not the whole line
         lazyredraw = true, -- don't redraw while executing macros
         updatetime = 4000, -- longer updatetime (default is 4000)
       },
