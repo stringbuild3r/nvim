@@ -5,7 +5,7 @@ return {
   event = "VeryLazy", -- load it lazily after startup
   opts = {
     open_mapping = [[<C-\>]],
-    direction = "horizontal",
+    direction = "float",
     start_in_insert = true,
     insert_mappings = true,
     terminal_mappings = true,
