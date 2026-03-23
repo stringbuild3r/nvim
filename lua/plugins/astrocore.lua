@@ -69,8 +69,8 @@ return {
         -- this is useful for naming menus
         -- ["<Leader>b"] = { desc = "Buffers" },
 
-        -- setting a mapping to false will disable it
-        -- ["<C-S>"] = false,
+        -- disable default Telescope find_files mapping
+        ["<Leader>ff"] = false,
       },
     },
   },
