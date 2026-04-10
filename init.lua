@@ -31,7 +31,8 @@ end
 vim.o.titlestring = '%{fnamemodify(getcwd(), ":t")} %{v:lua.GetCurrentIconFile()} %{expand("%:t")}'
 
 
-vim.opt.list = false
+vim.opt.list = true
+vim.opt.listchars = { space = "·", tab = "  ", trail = "·", nbsp = "·" }
 
 -- Cursor configuration
 vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
