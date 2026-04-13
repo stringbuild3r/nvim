@@ -32,11 +32,17 @@ vim.o.titlestring = '%{fnamemodify(getcwd(), ":t")} %{v:lua.GetCurrentIconFile()
 
 
 vim.opt.list = true
-vim.opt.listchars = { space = "·", tab = "  ", trail = "·", nbsp = "·" }
+vim.opt.listchars = { space = "·", tab = "··", trail = "·", nbsp = "·", multispace = "·", lead = "·" }
+
+vim.api.nvim_create_autocmd({ "ColorScheme", "VimEnter" }, {
+  callback = function()
+    for _, group in ipairs({ "NonText", "SpecialKey" }) do
+      vim.api.nvim_set_hl(0, group, { link = "Whitespace" })
+    end
+  end,
+})
 
 -- Cursor configuration
 vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
-
-
 
 
